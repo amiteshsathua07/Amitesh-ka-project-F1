@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Dashboard — Event Story</title>
+    <meta
+      name="description"
+      content="Interactive Formula 1 dashboard and event story landing page."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">F1</div>
+          <div>
+            <p class="eyebrow">Amitesh ka project</p>
+            <h1>Race Pulse</h1>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#story">Event Story</a>
+          <a href="#insights">Insights</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <span class="live-pill">Live race weekend</span>
+            <h2>Formula 1 dashboard built for performance and momentum.</h2>
+            <p>
+              Track every lap, compare pit decisions, and tell the full event story — from the opening session to the final chequered flag.
+            </p>
+            <div class="cta-row">
+              <button class="primary-btn">View dashboard</button>
+              <button class="secondary-btn">Read event story</button>
+            </div>
+          </div>
+
+          <div class="hero-panel card">
+            <div class="panel-header">
+              <span class="label">Session</span>
+              <span class="status dot-green">Race Mode</span>
+            </div>
+
+            <div class="race-card">
+              <div>
+                <p class="small-label">Track</p>
+                <h3>Monaco GP</h3>
+              </div>
+              <div class="race-flag">
+                <span class="flag-red"></span>
+                <span class="flag-white"></span>
+              </div>
+            </div>
+
+            <ul class="mini-list">
+              <li>
+                <span>Lap 31</span>
+                <strong>+0.82s</strong>
+              </li>
+              <li>
+                <span>Tyre wear</span>
+                <strong>48%</strong>
+              </li>
+              <li>
+                <span>Fuel delta</span>
+                <strong>6.4 kg</strong>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Key race metrics">
+          <article class="stat-card card">
+            <div class="stat-head">
+              <span class="label">Race pace</span>
+              <span class="trend up">+2.4%</span>
+            </div>
+            <h3>1:11.824</h3>
+            <p>Fastest sector pace in the last 3 laps.</p>
+          </article>
+
+          <article class="stat-card card">
+            <div class="stat-head">
+              <span class="label">Pit window</span>
+              <span class="trend flat">Stable</span>
+            </div>
+            <h3>18.2s</h3>
+            <p>Average stop time with tyre change.</p>
+          </article>
+
+          <article class="stat-card card">
+            <div class="stat-head">
+              <span class="label">Track temp</span>
+              <span class="trend up">+3°C</span>
+            </div>
+            <h3>31°C</h3>
+            <p>Surface temperature across the final stint.</p>
+          </article>
+
+          <article class="stat-card card">
+            <div class="stat-head">
+              <span class="label">Energy</span>
+              <span class="trend down">-8%</span>
+            </div>
+            <h3>72%</h3>
+            <p>Battery reserve before final push.</p>
+          </article>
+        </section>
+
+        <section class="dashboard" id="insights">
+          <div class="chart-panel card">
+            <div class="section-top">
+              <div>
+                <p class="eyebrow">Performance</p>
+                <h3>Lap-by-lap trend</h3>
+              </div>
+              <div class="filter-group" aria-label="Dashboard filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="track">Track</button>
+                <button class="filter-btn" data-filter="pit">Pit</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+              </div>
+            </div>
+
+            <div class="chart" aria-label="Performance comparison chart">
+              <div class="bar-wrap">
+                <span class="bar" style="--height: 58%"></span>
+                <label>Q1</label>
+              </div>
+              <div class="bar-wrap">
+                <span class="bar" style="--height: 66%"></span>
+                <label>Q2</label>
+              </div>
+              <div class="bar-wrap">
+                <span class="bar" style="--height: 74%"></span>
+                <label>Q3</label>
+              </div>
+              <div class="bar-wrap">
+                <span class="bar" style="--height: 82%"></span>
+                <label>Race</label>
+              </div>
+              <div class="bar-wrap">
+                <span class="bar" style="--height: 92%"></span>
+                <label>Final</label>
+              </div>
+            </div>
+          </div>
+
+          <aside class="highlight-panel card">
+            <p class="eyebrow">Live notes</p>
+            <h3>Race Summary</h3>
+            <ul>
+              <li>Front runners matched pace in the final third.</li>
+              <li>Undercut was effective on lap 22 for the lead pack.</li>
+              <li>Track position remained decisive through tight corners.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="story" id="story">
+          <div class="section-heading">
+            <p class="eyebrow">Event story</p>
+            <h3>What happened across the weekend</h3>
+          </div>
+
+          <div class="story-grid" id="storyGrid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
